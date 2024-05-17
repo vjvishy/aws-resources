@@ -7,7 +7,7 @@ output "region" {
 # Print Vpc Id
 output "vpc_id" {
   description = "Vpc Id"
-  value       = module.vpc.default_vpc_id
+  value       = module.vpc.vpc_id
 }
 
 output "project_name" {
@@ -30,6 +30,13 @@ output "vpc_public_subnets" {
   description = "Vpc Public Subnets"
   value       = module.vpc.public_subnets
 }
+
+# Print Vpc Private Subnets
+output "vpc_private_subnets" {
+  description = "Vpc Private Subnets"
+  value       = module.vpc.private_subnets
+}
+
 
 output "resource_tags" {
   description = "Resource Tags"
